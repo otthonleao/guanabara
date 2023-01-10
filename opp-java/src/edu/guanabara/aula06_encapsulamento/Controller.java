@@ -1,6 +1,6 @@
 package edu.guanabara.aula06_encapsulamento;
 
-public class Controller {
+public interface Controller {
 	public abstract void turnOn();
 	public abstract void turnOff();
 	public abstract void openMenu();
