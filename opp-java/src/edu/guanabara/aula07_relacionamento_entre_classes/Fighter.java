@@ -75,21 +75,22 @@ public class Fighter {
 	}
 	public void setWeight(float weight) {
 		this.weight = weight;
+		setCategory();
 	}
 	//Categoria
-	private String getCategory() {
+	public String getCategory() {
 		return this.category;
 	}
-	private void setCategory(String category) {
-		if (getWeight() < 52.2)
+	private void setCategory() {
+		if (this.getWeight() < 52.2) {
 			this.category = "Invalid";
-		if (getWeight() <= 70.3)
+		} else if (this.getWeight() <= 70.3) {
 			this.category = "Light"; //Leve
-		if (getWeight() <= 83.9)
+		} else if (this.getWeight() <= 83.9) {
 			this.category = "Medium";
-		if (getWeight() <= 120.2)
+		} else if (this.getWeight() <= 120.2) {
 			this.category = "Heavy";
-		else {
+		} else {
 			this.category = "Invalid";
 		}	
 	}
