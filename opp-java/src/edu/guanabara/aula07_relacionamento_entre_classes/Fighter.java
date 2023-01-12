@@ -1,7 +1,5 @@
 package edu.guanabara.aula07_relacionamento_entre_classes;
 
-import javax.swing.plaf.synth.SynthOptionPaneUI;
-
 public class Fighter {
 	//Atributos
 	private String name;
