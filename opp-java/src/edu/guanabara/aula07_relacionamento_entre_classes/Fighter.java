@@ -41,4 +41,77 @@ public class Fighter {
 		this.losses = losses;
 		this.drawns = drawns;
 	}
+	//Nome
+	public String getName() {
+		return this.name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	//Nacionalidade
+	public String getNationality() {
+		return this.nationality;
+	}
+	public void setNationatily(String nationality) {
+		this.nationality = nationality;
+	}
+	//Idade
+	public int getAge() {
+		return this.age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	//Altura
+	public float getHeight() {
+		return this.height;
+	}
+	public void setHeight(float height) {
+		this.height = height;
+	}
+	//Peso
+	public float getWeight() {
+		return this.weight;
+	}
+	public void setWeight(float weight) {
+		this.weight = weight;
+	}
+	//Categoria
+	private String getCategory() {
+		return this.category;
+	}
+	private void setCategory(String category) {
+		if (getWeight() < 52.2)
+			this.category = "Invalid";
+		if (getWeight() <= 70.3)
+			this.category = "Light"; //Leve
+		if (getWeight() <= 83.9)
+			this.category = "Medium";
+		if (getWeight() <= 120.2)
+			this.category = "Heavy";
+		else {
+			this.category = "Invalid";
+		}	
+	}
+	//Vitórias
+	public int getWins() {
+		return this.wins;
+	}
+	public void setWins(int wins) {
+		this.wins = wins;
+	}
+	//Derrotas
+	public int getLosses() {
+		return this.losses;
+	}
+	public void getLosses(int losses) {
+		this.losses = losses;
+	}
+	//Empates
+	public int getDrawns() {
+		return this.drawns;
+	}
+	public void setDrawns(int drawns) {
+		this.drawns = drawns;
+	}
 }
