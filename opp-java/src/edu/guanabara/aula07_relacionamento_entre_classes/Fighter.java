@@ -1,5 +1,7 @@
 package edu.guanabara.aula07_relacionamento_entre_classes;
 
+import javax.swing.plaf.synth.SynthOptionPaneUI;
+
 public class Fighter {
 	//Atributos
 	private String name;
@@ -11,23 +13,30 @@ public class Fighter {
 
 	//Métodos Públicos
 	public void present() {
-
+		System.out.println("---------------------------------");
+		System.out.println("It's time!!! With you the figther " + this.getName() + ", with " + this.getAge() + " years old, from " + this.getNationality() + ". Weighing " + this.getWeight() + "kg and height " + this.getHeight() + "meters.");
+		System.out.println("- " + this.getWins() + " wins");
+		System.out.println("- " + this.getLosses() + " losses");
+		System.out.println("- " + this.getDrawns() + " drawns");
 	}
 
 	public void status() {
-
+		System.out.println(this.getName() + " is on category " + this.getCategory());
+		System.out.println("Won" + this.getWins() + " times");
+		System.out.println("Lost" + this.getLosses() + " times");
+		System.out.println("Tied" + this.getDrawns() + " times");
 	}
 
 	public void winFight() {
-
+		this.setWins(this.getWins() + 1);
 	}
 
 	public void lossFight() {
-
+		this.setLosses(this.getLosses() + 1);
 	}
 
 	public void drawnFight() {
-
+		this.setDrawns(this.getDrawns() + 1);
 	}
 
 	//Construtor - Métodos Especiais
@@ -105,7 +114,7 @@ public class Fighter {
 	public int getLosses() {
 		return this.losses;
 	}
-	public void getLosses(int losses) {
+	public void setLosses(int losses) {
 		this.losses = losses;
 	}
 	//Empates
