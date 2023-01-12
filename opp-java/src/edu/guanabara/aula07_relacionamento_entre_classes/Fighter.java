@@ -11,18 +11,19 @@ public class Fighter {
 
 	//Métodos Públicos
 	public void present() {
-		System.out.println("---------------------------------");
-		System.out.println("It's time!!! With you the figther " + this.getName() + ", with " + this.getAge() + " years old, from " + this.getNationality() + ". Weighing " + this.getWeight() + "kg and height " + this.getHeight() + "meters.");
+		System.out.println("--------------------- FIGTHER PRESENT -----------------");
+		System.out.println("It's time!!! With you the figther " + this.getName() + ",\nwith " + this.getAge() + " years old, from " + this.getNationality() + ".\nWeighing " + this.getWeight() + "kg and height " + this.getHeight() + " meters.");
 		System.out.println("- " + this.getWins() + " wins");
 		System.out.println("- " + this.getLosses() + " losses");
 		System.out.println("- " + this.getDrawns() + " drawns");
 	}
 
 	public void status() {
+		System.out.println("-------------------------- STATUS ----------------------");
 		System.out.println(this.getName() + " is on category " + this.getCategory());
-		System.out.println("Won" + this.getWins() + " times");
-		System.out.println("Lost" + this.getLosses() + " times");
-		System.out.println("Tied" + this.getDrawns() + " times");
+		System.out.println("Won " + this.getWins() + " times");
+		System.out.println("Lost " + this.getLosses() + " times");
+		System.out.println("Tied " + this.getDrawns() + " times");
 	}
 
 	public void winFight() {
@@ -43,7 +44,7 @@ public class Fighter {
 		this.nationality = nationality;
 		this.age = age;
 		this.height = height;
-		this.weight = weight;
+		this.setWeight(weight);
 		this.wins = wins;
 		this.losses = losses;
 		this.drawns = drawns;
