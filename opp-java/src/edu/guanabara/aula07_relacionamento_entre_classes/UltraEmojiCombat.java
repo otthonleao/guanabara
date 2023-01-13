@@ -16,11 +16,10 @@ public class UltraEmojiCombat {
 
 		fighter[5] = new Fighter("Nerdaart", "Portugal", 30, 1.81f, 105.7f, 12, 2, 4);
 
-		fighter[3].present();
-		fighter[4].status();
-
 		Fight UEC01 = new Fight();
 		UEC01.schaduleFight(fighter[0], fighter[1]); //Marcando a luta
 		UEC01.fight();
+		fighter[0].status();
+		fighter[1].status();
 	}
 }
