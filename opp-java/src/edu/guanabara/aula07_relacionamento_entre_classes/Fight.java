@@ -2,8 +2,6 @@ package edu.guanabara.aula07_relacionamento_entre_classes;
 
 import java.util.Random;
 
-import javax.swing.plaf.synth.SynthOptionPaneUI;
-
 public class Fight {
 	private Fighter challenged; //desafiado
 	private Fighter challenging; //desafiante
