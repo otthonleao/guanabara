@@ -6,7 +6,7 @@ public class Person {
 	private char sex;
 
 	public void bitrhday () {
-
+		this.setAge(age++);
 	}
 
 	public String getName() {
