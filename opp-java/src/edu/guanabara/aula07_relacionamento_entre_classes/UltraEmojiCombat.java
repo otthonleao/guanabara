@@ -18,5 +18,9 @@ public class UltraEmojiCombat {
 
 		fighter[3].present();
 		fighter[4].status();
+
+		Fight UEC01 = new Fight();
+		UEC01.schaduleFight(fighter[0], fighter[1]); //Marcando a luta
+		UEC01.fight();
 	}
 }

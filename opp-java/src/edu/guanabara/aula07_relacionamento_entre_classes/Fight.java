@@ -2,6 +2,8 @@ package edu.guanabara.aula07_relacionamento_entre_classes;
 
 import java.util.Random;
 
+import javax.swing.plaf.synth.SynthOptionPaneUI;
+
 public class Fight {
 	private Fighter challenged; //desafiado
 	private Fighter challenging; //desafiante
@@ -22,33 +24,46 @@ public class Fight {
 	}
 	public void fight() {
 		if(this.approved == true) {
-			System.out.println("##########   ULTRA EMOJI COMBAT   ##########");
-			System.out.println("##########         APROVED        ##########");
-			System.out.println("With yooouuuu... the Challenged is: ");
+			System.out.println("\n##############        ULTRA EMOJI COMBAT        ##############");
+			System.out.println("##############              APROVED             ##############");
+
+			String play1 = this.challenged.getName();
+			System.out.println("\nWith yooouuuu... the Challenged is: " + play1);
 			this.challenged.present();
-			System.out.println("And the Challenging is: ");
+
+			String play2 = this.challenging.getName();
+			System.out.println("\nAnd the Challenging is: " + play2);
 			this.challenging.present();
+
 			//Sortear o resultado da luta
 			Random aleatory = new Random();
 			int winner = aleatory.nextInt(3); //Sortear 3 números: 0, 1, 2.
 			switch(winner) {
 				case 0: //Empate caso o sorteio for 0;
-					System.out.println("TIE");
+					System.out.println("\nIT'S TIE");
 					this.challenged.drawnFight();
 					this.challenging.drawnFight();
 					break;
 				case 1: //Desafiado vence
-					System.out.println("Victory of " + this.challenged.getName());
+					System.out.println("\nVICTORY OF " + this.challenged.getName());
 					this.challenged.winFight();
 					this.challenging.lossFight();
 					break;
 				case 2: //Desafiante vence
-					System.out.println("Victory of " + this.challenging.getName());
+					System.out.println("\nVICTORY OF " + this.challenging.getName());
 					this.challenged.lossFight();
 					this.challenging.winFight();
 					break;
 			}
-
+			System.out.println("\nAfter this big fight:");
+			System.out.println(play1 + " status now is: ");
+			System.out.println("Wins: " + this.challenged.getWins());
+			System.out.println("Losses: " + this.challenged.getLosses());
+			System.out.println("Drawns: " + this.challenged.getDrawns());
+			System.out.println("\n" + play2 + " status now is: ");
+			System.out.println("Wins: " + this.challenging.getWins());
+			System.out.println("Losses: " + this.challenging.getLosses());
+			System.out.println("Drawns: " + this.challenging.getDrawns());
 		}
 	}
 
@@ -80,5 +95,4 @@ public class Fight {
 	public void setApproved(boolean approved) {
 		this.approved = approved;
 	}
-
 }

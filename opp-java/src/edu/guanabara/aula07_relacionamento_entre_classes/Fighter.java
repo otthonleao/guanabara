@@ -12,7 +12,7 @@ public class Fighter {
 	//Métodos Públicos
 	public void present() {
 		System.out.println("--------------------- FIGTHER PRESENT -----------------");
-		System.out.println("It's time!!! With you the figther " + this.getName() + ",\nwith " + this.getAge() + " years old, from " + this.getNationality() + ".\nWeighing " + this.getWeight() + "kg and height " + this.getHeight() + " meters.");
+		System.out.println(this.getName() + " is " + this.getAge() + " years old, from " + this.getNationality() + ".\nWeighing " + this.getWeight() + "kg and height " + this.getHeight() + " meters.");
 		System.out.println("- " + this.getWins() + " wins");
 		System.out.println("- " + this.getLosses() + " losses");
 		System.out.println("- " + this.getDrawns() + " drawns");
